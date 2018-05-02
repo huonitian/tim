@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title></title>
+	<style>
+		*{ padding: 0; margin: 0; box-sizing: border-box;}
+		body{ -webkit-tap-highlight-color:rgba(0,0,0,0); font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.42857143; }
+		input,textarea,select,button{ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+		.reg{ background: #fff; padding: 0 3%; }
+		.reg .item{ border-bottom: 1px solid #e9e9e9; line-height: 3; font-size: 14px; }
+		.reg .item:before{ display: table; content: " "; }
+		.reg .item:after{ display: table; content: " "; clear: both; }
+		.reg .item .item_left{ float: left; width: 40%; }
+		.reg .item .item_right{ float: right; width: 60%; text-align: right; position: relative; }
+		.reg .item .native_place{ position: relative; }
+		.reg .item .native_place>div{ float: left; position: relative; margin-right: 5px; }
+		.reg .item .native_place .city_box{ display: none; }
+
+		.reg .item .native_place span{ display: inline-block; padding-right: 20px; background: url(Img/bottom.png) no-repeat right center; background-size:  16px 16px; cursor: pointer; }
+		.reg .item .native_place .native_sel{ position: absolute; top: 26%; left: 0; opacity: 0; width: 100%; }
+
+		.reg .item .census_register label{ padding-left: 20px; background: url(Img/radio.png) no-repeat left center; background-size: 16px 16px; cursor: pointer; }
+		.reg .item .census_register label:last-child{ margin-left: 5px; }
+		.reg .item .census_register label.act{ background: url(Img/radio_check.png) no-repeat left center; background-size: 16px 16px; }
+
+		.reg .item .item_right .sel{ display: inline-block; padding-right: 10%; background: url(Img/bottom.png) no-repeat right center; background-size:  16px 16px; cursor: pointer; }
+		.reg .item .item_right .sel.act{ background: url(Img/top.png) no-repeat right center; background-size:  16px 16px; }
+		.reg .item .education{ clear: both; background: #fff3fb; margin: 0 -3%; padding: 0 3%; display: none; }
+		.reg .item .education div{ border-bottom: 1px solid #e9e9e9; padding-left: 20px; background: url(Img/radio.png) no-repeat left center; background-size: 16px 16px; cursor: pointer; }
+		.reg .item .education div.act{ background: url(Img/radio_check.png) no-repeat left center; background-size: 16px 16px; }
+		.reg .item .education div:last-child{ border-bottom: none; }
+	</style>
+</head>
+<body>
+	<div class="reg">
+		<div class="item">
+			<div class="native_place">
+				<div>
+					籍贯：
+				</div>
+				<div class="province_box">
+					<span>请选择</span>
+					<select id="province" class="native_sel">
+						
+					</select>
+				</div>
+				<div class="city_box">
+					<span>请选择</span>
+					<select id="city" class="native_sel">
+						
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="census_register">
+				户籍：
+				<label>城镇</label>
+				<label>农村</label>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item_left">来佛山打工原因：</div>
+			<div class="item_right">
+				<span class="sel">选择打工原因</span>
+			</div>
+			<div class="education">
+				<div>
+					赚钱养家
+				</div>
+				<div>
+					寻求发展
+				</div>
+				<div>
+					子女伴读
+				</div>
+				<div>
+					与家人同住
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item_left">居住方式：</div>
+			<div class="item_right">
+				<span class="sel">选择居住房方式</span>
+			</div>
+			<div class="education">
+				<div>
+					住自己家
+				</div>
+				<div>
+					老乡合租
+				</div>
+				<div>
+					一人居住
+				</div>
+				<div>
+					集体宿舍
+				</div>
+				<div>
+					与家人同住
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+	<script type="text/javascript" src="city.js"></script>
+	<script>
+		//户籍
+		$(".reg .item .census_register label").on("click",function(){
+			$(this).addClass("act").siblings().removeClass("act");
+		})
+
+		//原因、方式
+		$(".reg .item .item_right .sel").on("click",function(){
+			$(this).toggleClass("act");
+			$(this).parent().siblings(".education").stop().slideToggle(400);
+		})
+		$(".reg .item .education div").on("click",function(){
+			$(this).addClass("act").siblings().removeClass("act");
+		})
+
+		// function jQuery110204424764094660667_1524881607161(res){
+		// 	console.log(res)
+		// }
+
+		$.ajax({
+			url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=gj&json=1&p=3&sid=1434_21121_20719&req=2&csor=2&pwd=g&cb=jQuery110204424764094660667_1524881607161&_=1524881607165',
+			type:"get",
+			dataType:"jsonp",
+			jsonpCallback:"jQuery110204424764094660667_1524881607161",
+			success:function(data){
+				console.log(data)
+			}
+		})
+	</script>
+</body>
+</html>
