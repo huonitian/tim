@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>处理</title>
+	<link rel="stylesheet" type="text/css" href="../Css/mobiscroll.custom-3.0.0-beta6.min.css">
+	<link rel="stylesheet" type="text/css" href="../Css/order.css">
+	<style type="text/css">
+		body{ background: #fff; }
+	</style>
+</head>
+<body>
+	<div class="handle">
+		<form>
+			<div class="choice">
+				<label class="act">
+					远程服务
+					<input type="radio" name="cc" value="0" checked>
+				</label>
+				<label>
+					预约上门
+					<input type="radio" name="cc" value="1">
+				</label>
+				<label>
+					上门服务
+					<input type="radio" name="cc" value="2">
+				</label>
+				<label>
+					服务完成
+					<input type="radio" name="cc" value="3">
+				</label>
+			</div>
+			<div class="describe">
+				<textarea placeholder="处理描述（限50个字）" maxlength="50"></textarea>
+				<div class="number">
+					<span>0</span>/50
+				</div>
+			</div>
+			<div class="order_time">
+				<div>请事先与客户电话确认好上门时间</div>
+				<input id="time" type="text" value="" placeholder="选择上门时间" readonly />
+			</div>
+			<div class="btns">
+		    	<div class="btn_dispatch">取消</div>
+		    	<div class="btn_handle">确定</div>
+		    </div>
+		</form>
+	</div>
+	<script type="text/javascript" src="../Jvs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../Jvs/mobiscroll.custom-3.0.0-beta6.min.js"></script>
+	<script>
+		$(".handle .choice label input").on("click",function(){
+			$(this).parent().addClass("act");
+			$(".handle .choice label input").not($(this)).parent().removeClass("act");
+			if($(this).val()=="1"){
+				$(".handle .order_time").show();
+			}else{
+				$(".handle .order_time").hide();
+				$(".handle .order_time input").val("");
+			}
+		})
+
+		$(".handle .describe textarea").keyup(function(){
+			var len = $(this).val().length;
+			$(this).siblings(".number").find("span").html(len);
+		})
+
+		var now = new Date(),
+			minDate = new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+        	maxDate = new Date(now.getFullYear(), now.getMonth()+1, now.getDate());
+
+	    $('#time').mobiscroll().date({
+	        theme: 'ios',
+	        lang: 'zh',
+	        display: 'bottom',
+	        min: minDate,
+	        max: maxDate
+	    });
+	</script>
+</body>
+</html>

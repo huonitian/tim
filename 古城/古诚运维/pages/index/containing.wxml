@@ -1,0 +1,119 @@
+<!--pages/index/containing.wxml-->
+
+<view class="containing_information">
+        <!-- <view class="Theuser">
+                <label style="letter-spacing:7rpx;">报障编号</label>
+                <text>：</text>
+                <view class="p">
+                        <input placeholder="请输入报障编号" value='{{f_itil_1801090100_P01}}' />
+                </view>
+        </view> -->
+        <view class="Theuser">
+                <label>申报用户：</label>
+                <view class="p">
+                        <input placeholder="请输入报障人姓名" type='text' bindinput='userName' value='{{name}}' />
+                        <text class="del" data-type="name" bindtap='clearData'></text>
+                </view>
+        </view>
+        <view class="Theuser">
+                <label>联系电话：</label>
+                <view class="p">
+                        <input placeholder="请输入联系电话" type='text' bindinput='phone' bindblur='isPhone' value='{{phone}}' />
+                        <text class="del" data-type="phone" bindtap='clearData'></text>
+                </view>
+        </view>
+        <view class="Theuser">
+                <label>所在区域：</label>
+                <view class="p icon">
+                        <input placeholder="选择省市区" type='text' disabled='disabled' bindtap='translate' value="{{f_itil_1801090100_012&&f_itil_1801090100_013&&f_itil_1801090100_014?f_itil_1801090100_012+'>'+f_itil_1801090100_013+'>'+f_itil_1801090100_014:''}}" />
+                </view>
+        </view>
+        <view class="Theuser">
+                <label>详细地址：</label>
+                <view class="p">
+                        <input placeholder="街道、楼牌号" type='text' bindinput='address' value='{{f_itil_1801090100_015}}' />
+                        <text class="del" data-type="address" bindtap='clearData'></text>
+                </view>
+        </view>
+
+        <view class="margin"></view>
+        <view class="Therefore">
+                <view class="through">故障描述</view>
+                <view class="describing">
+                        <textarea placeholder="请输入故障描述" bindinput='describe' maxlength='300' />
+                        <text class="Numeralslimit">{{num}}/300</text>
+                </view>
+                <view class="select_style">
+                       <view  style="padding-top:17rpx; float:left;">
+                       故障类型：
+                       </view>
+                        <view style="padding-top:0rpx; float:left;">
+                        <picker bindchange="selOne" value="{{index}}" range-key='text' style='display:inline-block;  ' range="{{arrayOne}}">
+                                <text>{{selectOne?selectOne:'行业'}}</text>
+                        </picker>
+                        <picker bindtap='selTwo' bindchange="selTwo" value="{{index}}" range-key='text' style='display:inline-block;' range="{{arrayTwo}}">
+                                <text>{{selectTwo?selectTwo:'品类'}}</text>
+                        </picker>
+                        <picker bindtap='selThree' bindchange="selThree" value="{{index}}" range-key='text' style='display:inline-block;' range="{{arrayThree}}">
+                                <text>{{selectThree?selectThree:'服务'}}</text>
+                        </picker>
+                        </view>
+                        <view style="clear:both;"></view>
+                        <!-- <text>洗衣机</text>
+                        <text>维修</text> -->
+                </view>
+        </view>
+        <view class="margin"></view>
+        <view class="Therefore suplwefwq__file">
+                <view class="through">照片上传
+                        <text class="three">（最多四张）</text>
+                </view>
+                <view class="weui-uploader__files">
+                        <block wx:for="{{imageList}}" wx:for-item="image" wx:key=''>
+                                <view class="weui-uploader__file">
+                                        <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage">
+                                        </image>
+                                        <text class="delete" data-id='{{index}}' bindtap="deleteImg"></text>
+                                </view>
+                        </block>
+                </view>
+                <view class="weui-uploader__input-box" wx:if='{{showTen}}'>
+                        <view class="weui-uploader__input" bindtap="chooseImg">
+                        </view>
+                </view>
+        </view>
+</view>
+
+<!--全部填写完成灰色按钮追加 buttontoadd 改变颜色!-->
+
+<button class="submit {{submit?'buttontoadd':''}}" bindtap="{{submit?'surePay':''}}">提交</button>
+
+
+<view class="animation-element-wrapper" animation="{{animation}}" style="z-index:200;visibility:{{show?'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+        <view class="animation-element" catchtap="nono">
+                <text class="left-bt" catchtap="hiddenFloatView" data-id="555">取消</text>
+                <text class="right-bt" catchtap="hiddenFloatView" style='color:green' data-id="666">确定</text>
+                <view class="line"></view>
+
+                <picker-view indicator-style="height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+                        <!--省-->
+                        <picker-view-column>
+                                <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+                                        {{sheng.name}}
+                                </view>
+                        </picker-view-column>
+                        <!--地级市-->
+                        <picker-view-column>
+                                <view wx:for="{{citys}}" wx:key="">
+                                        {{item.name}}
+                                </view>
+                        </picker-view-column>
+                        <!--区县-->
+                        <picker-view-column>
+                                <view wx:for="{{countys}}" wx:key="">
+                                        {{item.name}}
+                                </view>
+                        </picker-view-column>
+                </picker-view>
+        </view>
+</view>

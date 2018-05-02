@@ -1,0 +1,65 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "touristappid",
+	"projectname": "%E5%8F%A4%E8%AF%9A%E8%BF%90%E7%BB%B4",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "测试查询",
+					"pathName": "pages/index/query",
+					"query": "f_itil_1801090100_P01=",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "扫码测试",
+					"pathName": "pages/index/index",
+					"query": "APars=TC&BPars=TR",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "提交",
+					"pathName": "pages/index/containing",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "掉起支付",
+					"pathName": "pages/index/close_an_account",
+					"query": "f_itil_1801090100_P01=152016809966"
+				}
+			]
+		}
+	}
+}

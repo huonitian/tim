@@ -1,0 +1,14 @@
+page{background:#f4f4f4;}
+.title{background:#fff; font-size:30rpx; padding:20rpx 30rpx; border-bottom:1px #ddd solid; position:relative;}
+.xinxi_text{font-size:30rpx; padding:1px 0; padding-left:30rpx; background:#fff;}
+.xinxi_text .text_list{margin:30rpx 0; position:relative; padding-left:150rpx; color:#333;}
+.title .text{padding-left:20rpx; color:#333;}
+.title .left_border{display: inline-block; width:2rpx; height:30rpx; border-left:2px #61a5fa solid; position:absolute; top:28rpx;}
+.xinxi_text .text_list text{position:absolute; top:0; left:0; color:#999;}
+.xinxi_text textarea{width:95%;box-sizing: border-box; padding:20rpx 20rpx 56rpx 20rpx;font-size:30rpx; height:250rpx; background:#f4f4f4; margin-top:20rpx;}
+.cost{padding:30rpx; font-size:30rpx; background:#fff;}
+.cost text{padding-right:20rpx;}
+.cost text:nth-child(1){font-size:32rpx; font-weight:600; color:#333;}
+.cost text:nth-child(2){font-size:32rpx; font-weight:600; color:#61a5fa;}
+.cost .hiat{font-size:28rpx; color:#5d5d5d; padding-left:110rpx; color:red;}
+.bottom{position:fixed; bottom:0; width:100%; line-height:80rpx; color:#fff; background:#3b9ff2; text-align:center; font-size:35rpx;}

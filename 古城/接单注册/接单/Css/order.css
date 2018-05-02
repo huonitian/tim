@@ -1,0 +1,112 @@
+*{ padding: 0; margin: 0; box-sizing: border-box;}
+body{ -webkit-tap-highlight-color:rgba(0,0,0,0); font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; background: #f4f4f4; font-size: 14px; line-height: 1.42857143; text-size-adjust: 100% !important; -webkit-text-size-adjust: 100% !important; }
+a{ text-decoration: none;}
+ul,ol{ list-style-type: none;}
+.hundred{ display: block; width: 100%;}
+html{ font-size: calc(100vw/7.5); }
+input,select,textarea,button{ outline: 0; }
+input,textarea,select,button{ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+
+/*工作台*/
+.workbench .head{ background: #fff; padding: 4% 0; }
+.workbench .head .info_box{ position: relative; overflow: hidden; clear: both; padding-left: 3.5%; }
+.workbench .head .info_box .head_portrait{ float: left; width: 1.32rem; height: 1.32rem; border-radius: 4px; overflow: hidden; margin-right: 2%; }
+.workbench .head .info_box .info{ color: #333; }
+.workbench .head .info_box .info .name{ font-size: 0.32rem; font-weight: bold; }
+.workbench .head .info_box .info .name img{ vertical-align: middle; width: 0.35rem; position: relative; top: -1px; }
+.workbench .head .info_box .info .number{ font-size: 0.26rem; }
+.workbench .head .info_box .info .tag span{ display: inline-block; font-size: 0.24rem; color: #999; border: 1px solid #999; border-radius: 4px; padding: 0.05rem 0.06rem; }
+.workbench .head .info_box .info .all_order{ position: absolute; top: 0; right: 0; font-size: 0.24rem; background: #3ba1f1; color: #fff; padding: 0.5% 3%; border-bottom-left-radius: 0.3rem; border-top-left-radius: 0.3rem; }
+
+.workbench .head .detail{ overflow: hidden; clear: both; margin-top: 4%; padding-top: 4%; border-top: 1px solid #999; }
+.workbench .head .detail li{ float: left; width: 33.3333%; text-align: center; font-size: 0.24rem; color: #5d5d5d; }
+.workbench .head .detail li .num{ font-size: 0.44rem; font-weight: bold; color: #3ba1f1; }
+.workbench .head .detail li .num small{ font-size: 0.24rem; font-weight: normal; }
+
+.workbench .list{ padding-bottom: 4%; }
+.workbench .list li{ background: #fff; margin-top: 4%; padding: 3.5% 3.5% 0; font-size: 0.28rem; }
+.workbench .list li .title .tag{ font-weight: bold; color: #f39800; }
+.workbench .list li .title .distance{ color: #999; float: right; }
+.workbench .list li .txt{ color: #5d5d5d; margin-top: 1.2%; padding-bottom: 3%; line-height: 1.5; }
+.workbench .list li .btn_price{ border-top: 1px dashed #999; font-size: 0.28rem; padding: 3% 0; overflow: hidden; clear: both; }
+.workbench .list li .btn_price .price{ font-weight: bold; line-height: 1.6; }
+.workbench .list li .btn_price .button{ float: right; color: #5d5d5d; border: 1px solid #999; width: 18%; text-align: center; line-height: 1.6; border-radius: 4px; margin-left: 2%; cursor: pointer; }
+
+/*订单详情*/
+.order_detail{ padding-bottom: 12%; }
+.order_detail .line_mark{ padding: 2% 3.5%; }
+.order_detail .line_mark .icon_mark{ float: left; vertical-align: middle; width: 5%; margin-right: 2%; }
+.order_detail .line_mark .odd_numbers{ font-size: 0.24rem; font-weight: bold; color: #333; }
+.order_detail .line_mark .state{ float: right; font-weight: 0.28rem; color: #3b9ff2; }
+
+.order_detail .personal_details{ padding: 2% 3.5%; background: #fff; margin-bottom: 2%; }
+.order_detail .personal_details .details_title{ font-size: 0.28rem; padding-bottom: 2%; border-bottom: 1px dashed #999; }
+.order_detail .personal_details .details_title span{ display: inline-block; padding-left: 2%; border-left: 3px solid #3b9ff2; }
+.order_detail .personal_details .details_text .item{ margin-top: 2%; overflow: hidden; clear: both; font-size: 0.28rem; }
+.order_detail .personal_details .details_text .item span:nth-child(1){ float: left; width: 23%; color: #999; }
+.order_detail .personal_details .details_text .item span:nth-child(2){ float: left; width: 77%; color: #333; }
+.order_detail .personal_details .img_list{ overflow: hidden; clear: both; margin-top: 3%; }
+.order_detail .personal_details .img_list img{ float: left; width: 1.6rem; height: 1.6rem; margin-right: 0.18rem; }
+.order_detail .personal_details .img_list img:last-child{ margin-right: 0; }
+
+.order_detail .btn_order{ width: 100%; background: #3b9ff2; color: #fff; font-size: 0.32rem; text-align: center; padding: 3% 0; position: fixed; bottom: 0; z-index: 9; cursor: pointer; }
+.order_detail .btns{ width: 100%; position: fixed; bottom: 0; z-index: 9; text-align: center; font-size: 0.32rem; overflow: hidden; clear: both; }
+.order_detail .btns .btn_dispatch{ float: left; width: 50%; padding: 3% 0; background: #fff; color: #5d5d5d; border-top: 1px solid #999; cursor: pointer; }
+.order_detail .btns .btn_handle{ float: left; width: 50%; padding: 3% 0; background: #3b9ff2; color: #fff; border-top: 1px solid #3b9ff2; cursor: pointer; }
+
+/*处理*/
+.handle .choice{ padding: 5% 3.5% 4%; overflow: hidden; clear: both; }
+.handle .choice label{ float: left; width: 23%; line-height: 2.2; border: 1px solid #999; border-radius: 4px; color: #5d5d5d; font-size: 0.28rem; text-align: center; margin-right: 2.6%; }
+.handle .choice label:last-child{ margin-right: 0; }
+.handle .choice label.act{ background: url(../Img/icon_yes.png); background-size: 100% 100%; border-color: #3b9ff2; }
+.handle .choice label input{ display: none; }
+.handle .describe{ padding: 0 3.5%; }
+.handle .describe textarea{ background: #f4f4f4; color: #999; font-size: 0.28rem; padding: 2%; width: 100%; height: 3.0rem; resize: none; border: none; }
+.handle .describe .number{ text-align: right; font-size: 0.28rem; color: #333; }
+.handle .btns{ width: 100%; position: fixed; bottom: 0; z-index: 9; text-align: center; font-size: 0.32rem; overflow: hidden; clear: both; }
+.handle .btns .btn_dispatch{ float: left; width: 50%; padding: 3% 0; background: #fff; color: #5d5d5d; border-top: 1px solid #999; cursor: pointer; }
+.handle .btns .btn_handle{ float: left; width: 50%; padding: 3% 0; background: #3b9ff2; color: #fff; border-top: 1px solid #3b9ff2; cursor: pointer; }
+
+.handle .order_time{ padding: 5% 3.5% 0; font-size: 0.28rem; color: #333; display: none; }
+.handle .order_time input{ width: 100%; padding: 3%; border: none; font-size: 0.28rem; color: #5d5d5d; background: #f4f4f4; margin-top: 2%; }
+
+/*业务查询*/
+.business .search_date{ background: #fff; padding-top: 11.5%; }
+.business .search_date .search{ position: fixed; top: 0; width: 100%; padding: 2% 3.5%; background: #fff; border-bottom: 1px solid #f4f4f4; }
+.business .search_date .search input{ float: left; width: 80%; border: none; background: #f4f4f4; font-size: 0.24rem; color: #999; text-align: center; line-height: 2.5; border-radius: 4px; }
+.business .search_date .search .btn_screen{ float: left; width: 20%; font-size: 0.24rem; line-height: 2.5; text-align: right; cursor: pointer; }
+.business .search_date .search .btn_screen span{ display: inline-block; width: 0; height: 0; border: 0.08rem solid transparent; border-top: 0.14rem solid #444; position: relative; top: 0.05rem; margin-left: 10%; }
+
+.business .search_date .btn_date{ overflow: hidden; clear: both; padding: 2% 3.5%; border-bottom: 1px solid #f4f4f4; }
+.business .search_date .btn_date span{ float: left; width: 20%; margin-right: 6.6%; font-size: 0.28rem; color: #333; background: #f4f4f4; text-align: center; line-height: 2.3; border: 1px solid #f4f4f4; border-radius: 4px; cursor: pointer; }
+.business .search_date .btn_date span:last-child{ margin-right: 0; }
+.business .search_date .btn_date span.act{ background: #fff; border-color: #3b9ff2; color: #3b9ff2; }
+.business .search_date .date{ padding: 2.5% 3.5%; text-align: center; font-size: 0.28rem; color: #333; }
+
+.business .screen{ width: 100%; position: fixed; top: 7.4%; z-index: 9999; background: #fff; padding-top: 3%; display: none; }
+.business .screen .screen_box{ padding: 0 5%; overflow: hidden; clear: both; }
+.business .screen .screen_box label{ float: left; width: 30%; font-size: 0.28rem; line-height: 2.2; text-align: center; border: 1px solid #ddd; border-radius: 4px; margin-right: 5%; margin-bottom: 5%; }
+.business .screen .screen_box label:nth-child(3n){ margin-right: 0; }
+.business .screen .screen_title{ font-size: 0.26rem; color: #999; padding-bottom: 3%; }
+.business .screen .btns{ text-align: center; font-size: 0.32rem; }
+.business .screen .btns .reset{ float: left; width: 50%; padding: 3% 0; background: #fff; color: #5d5d5d; border-top: 1px solid #999; cursor: pointer; }
+.business .screen .btns .confirm{ float: left; width: 50%; padding: 3% 0; background: #3b9ff2; color: #fff; border-top: 1px solid #3b9ff2; cursor: pointer; }
+.business .mask{ width: 100%; height: 100%; position: fixed; z-index: 999; background: rgba(0,0,0,.6); display: none; }
+
+.business .list{ padding-bottom: 3%; }
+.business .list li{ margin-top: 3%; background: #fff; }
+.business .list li .subtitle{ padding: 2% 3.5%; font-size: 0.28rem; }
+.business .list li .subtitle .type{ font-weight: bold; color: #333; }
+.business .list li .subtitle .speed{ float: right; color: #999; }
+.business .list li .details_text{ padding: 2% 3.5%; font-size: 0.28rem; border-top: 1px dashed #999; }
+.business .list li .details_text .item{ margin-bottom: 2%; overflow: hidden; clear: both; }
+.business .list li .details_text .item:last-child{ margin-bottom: 0; }
+.business .list li .details_text .item span:nth-child(1){ float: left; width: 23%; color: #999; }
+.business .list li .details_text .item span:nth-child(2){ float: left; width: 77%; color: #333; }
+.business .list li .btn_order{ padding: 2% 3.5%; text-align: center; font-size: 0.28rem; color: #3b9ff2; border-top: 1px dashed #999; cursor: pointer; }
+.business .list li .btn_order span{ position: relative; top: 1px; }
+.business .list li .btn_order img{ vertical-align: middle; width: 5%; }
+
+
+

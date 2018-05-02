@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* reset */
+body{margin:0;font:14px Helvetica; color:#333333;}
+body, select, input, button, h1, h2, h3, h4, h5, h6 {font-size:14px}
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, form, fieldset, p, dl, dt, dd, table, th, td, img, blockquote{margin:0;padding:0;border:0; font-weight:500}
+input, button, textarea, img{line-height:normal; font:14px Microsoft YaHei;}
+abbr, acronym, address, cite, q, em, code, var, dfn, ins{font-style:normal;text-decoration:none;border:0}
+q:before, q:after{content:""}
+ul, ol, li{list-style:none}
+table{border-spacing:0; width:100%;}
+select, input, button{vertical-align:middle;}
+a{text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+*, *:before, *:after {box-sizing: border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;}
+body{height:100%;}
+.hide{ display:none;!important}
+.b-gray{ background:#f7f7f7;}
+.txt{ width:100%; border:none; padding:3px 5px;}
+
+/*苹果浏览器去掉默认*/
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;outline:none;}
+textarea {  -webkit-appearance: none;}
+input{-webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent;-webkit-user-drag: none;-webkit-touch-callout: none;outline: none;box-sizing: border-box;}/*苹果去阴影*/
+
+::-webkit-input-placeholder { /* WebKit browsers */    color:#999;  font-weight:500}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */   color:#999; font-weight:500}
+::-moz-placeholder { /* Mozilla Firefox 19+ */   color:#999; font-weight:500}
+:-ms-input-placeholder { /* Internet Explorer 10+ */    color:#999; font-weight:500}
+.btn:focus,.txt:focus{border:0;outline:none;} 
+
+/*全局*/
+html{font-size:312.5%;}
+/*结构*/
+/*header*/
+.phd{background:#09abbc; height:45px;line-height:45px; top:0px; left:0px; position:fixed; width:100%; z-index:99;padding:0 10px;}
+.phd h1{color:#fff;text-align:center; font-size:0.33rem; line-height:45px; font-weight:500;font-family: "微软雅黑";}
+.logo-left{width:60px;height:100%;position:absolute;left:0;top:0;}
+.back-right{width:60px;height:100%;position:absolute;right:0;top:0;}
+.back{background:url(../Img/break.png) no-repeat; width:28px; height:28px; background-size:28px 28px; position:absolute; cursor:pointer;right:8px;top:50%;margin-top:-14px;}
+.logo{background:url(../Img/logo.png) no-repeat; width:34px; height:34px; background-size:34px 34px; position:absolute; cursor:pointer;top:50%;margin-top:-17px;left:5px;}
+/*body*/
+.pbd{padding-top:45px;}

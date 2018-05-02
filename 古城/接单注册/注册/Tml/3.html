@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>工程师注册</title>
+	<link rel="stylesheet" type="text/css" href="../Css/register.css">
+</head>
+<body>
+	<div class="header">
+		<div class="line"></div>
+		<div class="line_act line_two"></div>
+		<ul>
+			<li>
+				<span class="past">1</span>
+				<p>信息录入</p>
+			</li>
+			<li>
+				<span class="act">2</span>
+				<p>身份认证</p>
+			</li>
+			<li>
+				<span>3</span>
+				<p>人脸核验</p>
+			</li>
+			<li>
+				<span>4</span>
+				<p>注册成功</p>
+			</li>
+		</ul>
+	</div>
+	<div class="confirm">
+		<form>
+			<div class="bg_white">
+				<div class="img_id">
+					<img src="../Img/icon_add.png">
+					<img src="../Img/icon_add.png">
+				</div>
+				<div class="sub_title"><span class="icon"></span>身份证信息</div>
+				<div class="item_box">
+					<div class="text">姓名</div>
+					<div class="input_box">
+						<input type="text" name="" placeholder="请输入您的姓名" />
+					</div>
+				</div>
+				<div class="item_box">
+					<div class="text">姓别</div>
+					<div class="input_box">
+						<label>
+							<input type="radio" name="aa" value="1" />男
+						</label>
+						<label>
+							<input type="radio" name="aa" value="0" />女
+						</label>
+					</div>
+				</div>
+				<div class="item_box">
+					<div class="text">身份证号</div>
+					<div class="input_box">
+						<input type="text" name="" placeholder="请输入您的身份证号" />
+					</div>
+				</div>
+			</div>
+			<div class="undetected">未检测的您的身份证信息，您可返回重新上传身份证照片。</div>
+			<div onclick="window.location.href='4.html'" class="btn_next">确定</div>
+		</form>
+	</div>
+</body>
+</html>

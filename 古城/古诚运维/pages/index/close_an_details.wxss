@@ -1,0 +1,17 @@
+page{background:#f4f4f4;}
+.title{position:relative; background:#fff; font-size:30rpx; padding:20rpx 30rpx; border-bottom:1px #ddd solid;}
+.title .reminder{position:absolute; right:30rpx; top:15rpx; display: inline-block; width:120rpx; border:1px #333 solid; text-align:center; line-height:50rpx; border-radius:50rpx; color:#333; padding-left:0;}
+.title .text{padding-left:20rpx; color:#333;}
+.title .left_border{display: inline-block; width:2rpx; height:30rpx; border-left:2px #61a5fa solid; position:absolute; top:28rpx;}
+.xinxi_text{font-size:30rpx; padding:1px 0; padding-left:30rpx; background:#fff;}
+.xinxi_text .text_list{margin:30rpx 0; position:relative; padding-left:150rpx; color:#333; padding-right:30rpx;}
+.xinxi_text .text_list text{position:absolute; top:0; left:0; color:#999;}
+.cost{padding:30rpx; font-size:30rpx; background:#fff;}
+.cost text{padding-right:20rpx;}
+.cost text:nth-child(1){font-size:32rpx; font-weight:600; color:#333;}
+.cost text:nth-child(2){font-size:32rpx; font-weight:600; color:#61a5fa;}
+.cost .hiat{font-size:28rpx; color:#5d5d5d; padding-left:80rpx; color:red;}
+.text_img{padding:20rpx;}
+.text_img .text{float:left; padding-right:20rpx;}
+.text_img .text image{width:150rpx; height:150rpx; border-radius: 5rpx;}
+.clear{clear:both;}

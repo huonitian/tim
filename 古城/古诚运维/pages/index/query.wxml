@@ -1,0 +1,65 @@
+<!--pages/index/query.wxml-->
+
+<view class="Orderquery" wx:if="{{isShow}}">
+    <view class="Orderquery_title">
+        <view class="p">工单编号：
+            <text>{{orderInfo.f_itil_1801090100_P01}}</text>
+        </view>
+        <view class="p">申报用户：
+            <text>{{orderInfo.f_itil_1801090100_002}}</text>
+        </view>
+        <view class="p">申报时间：
+            <text>{{orderInfo.f_itil_1801090100_S03}}</text>
+        </view>
+        <text class="reminder" wx:if="{{orderInfo.f_itil_1801090100_009<4}}" bindtap='please'>催单</text>
+        <text class="details" bindtap='goDetail'>详情</text>
+    </view>
+    <view class="ul_classname">
+        <block wx:for='{{process}}'>
+            <view class="li">
+                <view class="Everyday {{item.f_itil_1801090101_003==0?'add':''}}">
+                    <block wx:if='{{item.f_itil_1801090101_003==0}}'>
+                        <image class="phone" src="/pages/index/Img/single.png"></image>
+                    </block>
+                    <block wx:if='{{item.f_itil_1801090101_003==1}}'>
+                        <image class="phone" src="/pages/index/Img/computer.png"></image>
+                    </block>
+                    <block wx:if='{{item.f_itil_1801090101_003==2}}'>
+                        <image class="phone" src="/pages/index/Img/event.png"></image>
+                    </block>
+                    <block wx:if='{{item.f_itil_1801090101_003==3}}'>
+                        <image class="phone" src="/pages/index/Img/refresh.png"></image>
+                    </block>
+                    <block wx:if='{{item.f_itil_1801090101_003==4}}'>
+                        <image class="phone" src="/pages/index/Img/phone.png"></image>
+                    </block>
+                    <text class="cover"></text>
+                </view>
+                <view class="System_review">
+                    <image class="arrow" src="/pages/index/Img/arrow.png"></image>
+                    <view class="h1">{{item.f_itil_1801090101_002}}</view>
+                    <text class="time">{{item.f_itil_1801090101_S03}}</text>
+                    <view class="review_tishi" wx:if="{{item.f_itil_1801090101_004}}">
+                        {{item.f_itil_1801090101_004}}
+                    </view>
+                    <block wx:if="{{item.f_itil_1801090101_003==1}}">
+                        <view class="review_text" wx:if="{{item.f_itil_1801090101_005&&item.f_itil_1801090101_006}}">
+                            <view class="text_p">
+                                工程师：
+                                <text>{{item.f_itil_1801090101_005}}</text>
+                            </view>
+                            <view class="text_p">
+                                电话：
+                                <text class="blue" data-phone='{{item.f_itil_1801090101_006}}' bindtap=''>{{item.f_itil_1801090101_006}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+ <navigator url='index' open-type='reLaunch'>
+    <text class="goback" wx:if="{{isBack}}"></text>
+</navigator> 

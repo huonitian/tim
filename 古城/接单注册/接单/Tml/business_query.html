@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>业务查询</title>
+	<link rel="stylesheet" type="text/css" href="../Css/order.css">
+</head>
+<body>
+	<div class="business">
+		<div class="search_date">
+			<div class="search">
+				<input type="text" name="" value="" placeholder="输入订单号或手机号">
+				<div class="btn_screen">筛选<span></span></div>
+			</div>
+			<div class="btn_date">
+				<span class="act">日</span>
+				<span>周</span>
+				<span>月</span>
+				<span>年</span>
+			</div>
+			<div class="date">2018-03-01</div>
+		</div>
+		<div class="screen">
+			<div class="screen_box">
+				<div class="screen_title">订单状态（单选）</div>
+				<div>
+					<label>全部</label>
+					<label>待接单</label>
+					<label>待处理</label>
+					<label>处理中</label>
+					<label>已完成</label>
+				</div>
+			</div>
+			<div class="screen_box">
+				<div class="screen_title">订单状态（单选）</div>
+				<div>
+					<label>电脑维修</label>
+					<label>家电维修</label>
+					<label>水电维修</label>
+					<label>家政服务</label>
+				</div>
+			</div>
+			<div class="btns">
+				<div class="reset">重置</div>
+				<div class="confirm">确定</div>
+			</div>
+		</div>
+		<div class="mask"></div>
+		<div class="list">
+			<ul>
+				<li>
+					<div class="subtitle">
+						<span class="type">电脑维修</span>
+						<span class="speed">待接单</span>
+					</div>
+					<div class="details_text">
+			            <div class="item">
+			            	<span>定&nbsp;障&nbsp;人&nbsp;：</span>
+			            	<span>23232</span>
+			            </div>
+			            <div class="item">
+			            	<span>订&nbsp;单&nbsp;号&nbsp;：</span>
+			            	<span>2222</span>
+			            </div>
+			            <div class="item">
+			            	<span>报障类型：</span>
+			            	<span>222上门地址上门地址上门地址上门地址上门地址上门地址上门地址</span>
+			            </div>
+			            <div class="item">
+			            	<span>下单时间：</span>
+			            	<span>222</span>
+			            </div>
+			        </div>
+			        <div class="btn_order">
+			        	<img class="icon_mark" src="../Img/icon_text.png">
+			        	<span>接单</span>
+			        </div>
+				</li>
+				<li>
+					<div class="subtitle">
+						<span class="type">电脑维修</span>
+						<span class="speed">待处理</span>
+					</div>
+					<div class="details_text">
+			            <div class="item">
+			            	<span>定&nbsp;障&nbsp;人&nbsp;：</span>
+			            	<span>23232</span>
+			            </div>
+			            <div class="item">
+			            	<span>订&nbsp;单&nbsp;号&nbsp;：</span>
+			            	<span>2222</span>
+			            </div>
+			            <div class="item">
+			            	<span>报障类型：</span>
+			            	<span>222上门地址上门地址上门地址上门地址上门地址上门地址上门地址</span>
+			            </div>
+			            <div class="item">
+			            	<span>下单时间：</span>
+			            	<span>222</span>
+			            </div>
+			        </div>
+				</li>
+				<li>
+					<div class="subtitle">
+						<span class="type">电脑维修</span>
+						<span class="speed">待处理</span>
+					</div>
+					<div class="details_text">
+			            <div class="item">
+			            	<span>定&nbsp;障&nbsp;人&nbsp;：</span>
+			            	<span>23232</span>
+			            </div>
+			            <div class="item">
+			            	<span>订&nbsp;单&nbsp;号&nbsp;：</span>
+			            	<span>2222</span>
+			            </div>
+			            <div class="item">
+			            	<span>报障类型：</span>
+			            	<span>222上门地址上门地址上门地址上门地址上门地址上门地址上门地址</span>
+			            </div>
+			            <div class="item">
+			            	<span>下单时间：</span>
+			            	<span>222</span>
+			            </div>
+			        </div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="../Jvs/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../Jvs/date.js"></script>
+	<script>
+		var today = formatDate(now);
+		$(".business .search_date .date").html(today);
+		$(".business .search_date .btn_date span").on("click",function(){
+			var tml = $(this).html();
+			$(".business .search_date .btn_date span").removeClass("act");
+			$(this).addClass("act");
+
+			if(tml=="日"){
+				$(".business .search_date .date").html(today);
+			}else if(tml=="周"){
+				var startWeekDate = getWeekStartDate(),
+					endWeekDate = getWeekEndDate();
+				$(".business .search_date .date").html(startWeekDate+" ~ "+endWeekDate);
+			}else if(tml=="月"){
+				var startMonthDate = getMonthStartDate(),
+					endMonthDate = getMonthEndDate();
+				$(".business .search_date .date").html(startMonthDate+" ~ "+endMonthDate);
+			}else if(tml=="年"){
+				var startYearDate = nowYear+"-01-01",
+					endYearDate = nowYear+"-12-31";
+				$(".business .search_date .date").html(startYearDate+" ~ "+endYearDate);
+			}
+		})
+
+		//筛选
+		$(".business .search_date .search .btn_screen").on("click",function(){
+			$(".business .screen").stop().slideToggle(400);
+			$(".business .mask").stop().fadeToggle(400);
+		})
+	</script>
+</body>
+</html>

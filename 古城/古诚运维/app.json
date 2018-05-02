@@ -1,0 +1,9 @@
+{
+        "pages": [
+                "pages/index/index",
+                "pages/index/containing",
+                "pages/index/close_an_account",
+                "pages/index/close_an_details",
+                "pages/index/query"
+        ]
+}

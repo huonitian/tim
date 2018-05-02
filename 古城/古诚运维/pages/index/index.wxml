@@ -1,0 +1,21 @@
+<!--index.wxml-->
+
+
+<view class="indexhtml backgroundImg">
+        <view class="ancient">
+                <image class="logotp" mode="widthFix" src="/pages/index/Img/logotp.png"></image>
+                <view class="city">
+                        <!-- <navigator url="containing"> -->
+                        <view class="containing" bindtap='containing'>报障</view>
+                        <!-- </navigator> -->
+                        <navigator url="query">
+                                <view class="query">查询</view>
+                        </navigator>
+                </view>
+        </view>
+        <view class="bottom-thecontent">
+                <view class="h1">广州市古诚信息科技有限公司</view>
+                <view class="p">服务热线：020-29069588</view>
+                <view class="p">地址：广州市天河区中山大道西305号大东汇商务港602室</view>
+        </view>
+</view>

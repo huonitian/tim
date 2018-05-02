@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>南海桂城医院</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../Css/basic.css" />
+	<link rel="stylesheet" type="text/css" href="../Css/reg.css">
+</head>
+<body class="bg_blue">
+	<header class="phd">
+		<div class="logo-left" >
+			<span class="logo"></span>
+		</div>
+		<div class="back-right" onclick="history.go(-1)">
+			<span class="back"></span>
+		</div>
+		<h1>医技预约>预约确认</h1>
+	</header>
+	<section class="confirmation">
+		<ul class="list">
+			<li class="item">
+				<div class="subject_left">诊疗卡号：</div>
+				<div class="result_right">094339483904</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">姓名：</div>
+				<div class="result_right">徐艳玲 女 59岁</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">开单科室：</div>
+				<div class="result_right">神经内科</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">开单医生：</div>
+				<div class="result_right">张大楠</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">开单时间：</div>
+				<div class="result_right">201-01-02 16:23:23</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">检查项目：</div>
+				<div class="result_right">上腹部</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">检查部位：</div>
+				<div class="result_right">上腹部上腹部上腹部上腹部上腹部上腹部</div>
+			</li>
+		</ul>
+		<div class="cutoff_rule">
+			<span class="left_round"></span>
+			<span class="right_round"></span>
+			<div class="line"></div>
+		</div>
+		<ul class="list">
+			<li class="item">
+				<div class="subject_left">检查提示：</div>
+				<div class="result_right">上腹部</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">检查部位熟练：</div>
+				<div class="result_right">1</div>
+			</li>
+			<li class="item">
+				<div class="subject_left">预约检查时间：</div>
+				<div class="result_right">201-01-02 16:23:23</div>
+			</li>
+		</ul>
+		<div class="btn_confirmation">确认预约</div>
+	</section>
+	<script type="text/javascript" src="../Jvs/jquery-1.7.2.min.js"></script>
+	<script>
+		var winH = $(window).height()-65;
+		$(".confirmation").css("min-height",winH+"px");
+	</script>
+</body>
+</html>

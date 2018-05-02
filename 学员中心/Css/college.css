@@ -1,0 +1,52 @@
+*{ padding: 0; margin: 0; box-sizing: border-box;}
+body{ -webkit-tap-highlight-color:rgba(0,0,0,0); font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.42857143; font-size: 14px; }
+a{ text-decoration: none;}
+ul,ol{ list-style-type: none;}
+.hundred{ display: block; width: 100%;}
+input,select,textarea,button{ outline: 0; line-height: 1.42857143; }
+input,textarea,select,button{ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.success .tip{ text-align: center; font-size: 16px; margin-top: 15%; }
+.success .return{ display: block; width: 50%; text-align: center; padding: 2% 0; color: #fc68a4; font-size: 18px; border-radius: 4px; border: 1px solid #fc68a4; margin: 25% auto 0; }
+
+.register .subtitle{ padding: 3%; border-bottom: 1px solid #e9e9e9; }
+.register .subtitle span{ display: inline-block; border-left: 3px solid #fd68a4; padding-left: 3%; }
+
+.register .from_box{ padding: 0 3%; font-size: 14px; }
+.register .from_box .item{ border-bottom: 1px solid #e9e9e9; }
+.register .from_box .item:before{ display: table; content: " "; }
+.register .from_box .item:after{ display: table; content: " "; clear: both; }
+.register .from_box .item .item_left{ float: left; width: 40%; padding: 3% 0; }
+.register .from_box .item .item_right{ float: right; width: 60%; text-align: right; position: relative; padding: 3% 0; }
+.register .from_box .item .item_right .input_text{ font-size: 14px; text-align: right; border: none; background: none; width: 100%; }
+.register .from_box .item .item_right .sel{ display: inline-block; padding-right: 10%; background: url(../Img/bottom.png) no-repeat right center; background-size: 16px 16px; cursor: pointer; }
+.register .from_box .item .item_right .sel_box{ display: inline-block; padding-right: 10%; background: url(../Img/bottom.png) no-repeat right center; background-size: 16px 16px; cursor: pointer; }
+.register .from_box .item .item_right .active{ background: url(../Img/top.png) no-repeat right center; }
+
+#sel_age{ opacity: 0; position: absolute; right: 0; top: 27%; width: 30%;}
+
+.register .from_box .item .item_right .num{ float: right; width: 30%; position: relative; }
+.register .from_box .item .item_right .num input{ width: 50%; text-align: center; font-size: 14px; background: none; border: none; border-bottom: 1px solid #bfbbbe; }
+
+.register .from_box .item .item_right .num .birth{ opacity: 0; position: absolute; right: 0; top: 7%; width: 65%; }
+.register .from_box .item .item_right .num .icon_bounced{ vertical-align: middle; width: 10px; }
+
+.register .from_box .item .label_radio{ margin-left: 3%; cursor: pointer; }
+.register .from_box .item .label_radio .input_radio{ -webkit-appearance: none; appearance: none; background: url(../Img/radio.png) no-repeat; background-size: 100% 100%; width: 16px; height: 16px; vertical-align: middle; margin-right: 2%; }
+.register .from_box .item .label_radio .input_radio:checked{ background: url(../Img/radio_check.png) no-repeat; background-size: 100% 100%; }
+
+.register .from_box .item .education{ clear: both; background: #fff3fb; margin: 0 -3%; padding: 0 3%; display: none; }
+.register .from_box .item .education .border_bottom{ border-bottom: 1px solid #e9e9e9; }
+.register .from_box .item .education .label_radio{ display: inline-block; padding: 3% 0; margin-left: 0; width: 24%; }
+.register .from_box .item .education .label_radio .input_radio{ margin-right: 7%; }
+.register .from_box .item .education .other{ margin-left: -8%; background: none; border: none; border-bottom: 1px solid #bfbbbe; font-size: 14px; }
+
+.register .from_box .item .education.education_hundred .label_radio{ width: 100%; }
+.register .from_box .item .education.education_hundred .label_radio .input_radio{ margin-right: 3%; }
+
+.register .from_box .btns .btn_submit{ display: block; width: 90%; margin: 18% auto 5%; background: #fd68a4; color: #fff; text-align: center; font-size: 16px; padding: 2.2% 0; border: none; border-radius: 4px; }
+
+@media (max-width: 350px){
+	.register .from_box .item .education{ padding: 0 2%; }
+	.register .from_box .item .education .label_radio .input_radio{ margin-right: 1%; }
+}

@@ -1,0 +1,106 @@
+body{ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+.bg_body{ background: #f4f4f4; }
+.bg_blue{ background: #79d5d8; }
+
+/*05.html*/
+.gh-curDoc{position: fixed;width: 100%;top:45px;left:0;height:88px;overflow: hidden;z-index: 999;background: #fff;z-index: 888;}
+.gh-km{height: 55px;width: 100%;background:#ffffff;text-align: center;line-height:55px;font-size: 18px;position: relative;position: relative;z-index: 999}
+.gh-times{width: 100%;text-align:center;height: 30px;line-height: 30px;}
+.gh-times span{background: url(../Img/icon/icon-times.png) no-repeat;width:16.8px;height: 16.8px;background-size:16.8px 16.8px;display:inline-block;margin-right:5px;vertical-align:sub;}
+.showtime{color:#a6a6a6;font-family: "微软雅黑";}
+.time-main{max-width: 320px;width: 100%;position: relative;margin:0 auto;}
+
+.gh-fix-mode .times{width: 100%;height: 30px;position: relative;-moz-box-shadow:0px 1px 3px #ccc; -webkit-box-shadow:0px 1px 3px #ccc; box-shadow:0px 1px 3px #ccc;}
+.gh-fix-mode .gh-times{background:#fff;}
+
+.left-line,.right-line{max-width:70px;width: 100%;border-bottom:1px solid #b8b8b8;height: 15px;left:10px;top:0;display: block;position: absolute;}
+.right-line{left:auto;right:10px}
+.definition-time{width: 100%;overflow: hidden;height: 50px;position: relative;padding:0 50px;background: #fff;}
+.definition-time .swiper-wrapper{text-align: center;}
+.definition-time .leftBtn,.definition-time .rightBtn{position: absolute;z-index: 555;left:0;top:0;width:50px;height: 100%;background: #fff;}
+.definition-time .leftBtn,.definition-time .rightBtn{border-bottom:1px solid #ccc;border-top:1px solid #ccc}
+.definition-time .leftBtn{border-right:1px solid #ccc;}
+.definition-time .rightBtn{border-left:1px solid #ccc;}
+.definition-time .rightBtn{right:0;left:auto;}
+.definition-time .swiper-button-prev,.definition-time .swiper-container-rtl .swiper-button-next{background-image: url(../Img/icon/lgreen_OTabChoise.png);left: 10px;right: auto;}
+.definition-time  .swiper-button-next,.definition-time  .swiper-container-rtl .swiper-button-prev{background-image:url(../Img/icon/rgreen_OTabChoise.png);left:auto;cursor:pointer;width: 13.3px;height: 21px;background-size:13.3px 21px;position: absolute;top:50%;margin-top:-10.5px;right:50%;margin-right:-6.65px;}
+
+.definition-time .swiper-button-prev.swiper-button-disabled{background-image:url(../Img/icon/l_TabChoise.png) ;opacity: 1;cursor:not-allowed;width: 13.3px;height: 21px;background-size:13.3px 21px;position: absolute;left:50%;margin-left:-6.65px;top:50%;margin-top:-10.5px;}
+.definition-time  .swiper-button-next.swiper-button-disabled{background-image:url(../Img/icon/r_TabChoise.png);opacity: 1;cursor:not-allowed;width: 13.3px;height: 21px;background-size:13.3px 21px;}
+.definition-time .swiper-button-next,.definition-time .swiper-button-prev{background-size: 19px 30px;width: 13.3px;height: 21px;background-size:13.3px 21px;position: absolute;left:50%;top:50%;margin-top:-10.5px;margin-left:-6.65px}
+.definition-time  .swiper-slide{border-top:1px solid #d6d6d6;word-break: break-all;padding:10px 0px;box-sizing: border-box;border-bottom:1px solid #d6d6d6;border-right:1px solid #d6d6d6}
+.definition-time  .swiper-slide p{padding-bottom:5px}
+
+.getweek  div.hover span.curs{position: absolute;right:0;top:0;background: url(../Img/icon/cur_choice.png) no-repeat;width:22px;height: 22px;background-size:22px 22px;box-sizing: border-box;z-index: 999;}
+.getweek  div.hover span{position: absolute;right:0;bottom:0;background: url(../Img/icon/icon_bottonsj.png) no-repeat;width:15.6px;height: 15.6px;background-size:15.6px 15.6px;box-sizing: border-box;z-index: 999;}
+.getweek div span.curs{background: url(../Img/icon/default_mr.png);width:22px;height: 22px;background-size:22px 22px;box-sizing: border-box;z-index: 666;position: absolute;right:0;top:0;}
+.definition-time  div.full{background: #f4f4f4;}
+.definition-time  div.full span{position: absolute;right:0;top:0;background: url(../Img/icon/full.png) no-repeat;width:22px;height: 22px;background-size:22px 22px;}
+.definition-time  div em{right:0;top:-24px;position: absolute;color:#fff;}
+
+.date_subject{ margin-top: 133px; font-size: 14px; padding: 10px 14px; }
+.date_subject .subject_right{ float: right; }
+
+.table_time{ width: 100%; border-collapse: collapse; background: #fff; }
+.table_time tr td{ border: 1px solid #e6e6e6; border-left: 0; border-right: none; padding: 8px 0; text-align: center; }
+.table_time tr td span{ display: inline-block; color: #fff; padding: 3px 12px; border-radius: 4px; }
+.table_time .btn_bespoke{ background: #31adb8; }
+.table_time .btn_expired{ background: #999999; }
+
+/*01.html*/
+.bespoke_box{ margin-top: 45px; }
+.bespoke_box .list{ background: #fff; padding: 0 14px; }
+.bespoke_box .list li{ overflow: hidden; clear: both; padding: 10px 0; border-bottom: 1px solid #e5e5e5; position: relative; }
+.bespoke_box .list li:last-child{ border-bottom: none; }
+.bespoke_box .list li .icon_r{ position: absolute; top: 30px; right: 0; width: 10px; }
+.bespoke_box .list li .img{ float: left; margin-right: 10px; }
+.bespoke_box .list li .img img{ width: 40px; padding-top: 10px; }
+.bespoke_box .list li .infor{ margin-top: 3px; }
+.bespoke_box .list li .infor p{ font-weight: bold; font-size: 16px; line-height: 1.8; color: #333; }
+.bespoke_box .list li .infor p+p{ font-weight: normal; font-size: 14px; color: #60c0c8; }
+.bespoke_box .tip{ font-size: 16px; line-height: 1.8; padding: 0 14px; margin-top: 20px; color: #757575; }
+.bespoke_box .tip .subtitle{ color: #333; font-weight: bold; }
+
+/*02.html and 04.html*/
+.choice{ margin-top: 45px; background: #fff; }
+.choice li{ overflow: hidden; clear: both; padding: 10px 14px; border-bottom: 1px solid #e5e5e5; position: relative; }
+.choice li:last-child{ border-bottom: none; }
+.choice li .icon_r{ position: absolute; top: 28px; right: 14px; width: 10px; }
+.choice li .img{ float: left; margin-right: 10px; }
+.choice li .img img{ width: 50px; height: 50px; border-radius: 50%; }
+.choice li .infor{ margin-top: 3px; }
+.choice li .infor p{ font-weight: bold; font-size: 16px; line-height: 1.5; color: #333; }
+.choice li .infor p+p{ font-weight: normal; font-size: 14px; color: #999; }
+
+/*03.html*/
+.application{ margin-top: 45px; padding: 0 14px; background: #fff; font-size: 14px; }
+.application li{ position: relative; padding: 15px 0; border-bottom: 1px solid #e5e5e5; }
+.application li:last-child{ border-bottom: none; }
+.application li .icon_r{ position: absolute; top: 16.5px; right: 0; width: 10px; }
+
+/*06.html and 07.html*/
+.confirmation{ margin: 55px 14px 10px; background: #fff; border-radius: 4px; position: relative; overflow: hidden; }
+.confirmation .list{ padding-top: 10px; }
+.confirmation .list .item{ overflow: hidden; clear: both; font-size: 14px; padding: 0 10px; margin-bottom: 15px; }
+.confirmation .list .item .subject_left{ float: left; width: 37%; color: #a6a6a6; }
+.confirmation .list .item .result_right{ float: right; width: 63%; color: #333; }
+.confirmation .btn_confirmation{ width: 70%; margin: 20% auto 5%; background: #31adb8; font-size: 16px; color: #fff; text-align: center; padding: 10px 0; border-radius: 4px; }
+
+.confirmation .cutoff_rule{ overflow: hidden; clear: both; }
+.confirmation .cutoff_rule .line{ border-top: 1px dashed #999; margin-top: 7.5px; }
+.confirmation .cutoff_rule span{ width: 15px; height: 15px; border-radius: 50%; background: #79d5d8; }
+.confirmation .cutoff_rule .left_round{ float: left; margin-left: -7.5px; }
+.confirmation .cutoff_rule .right_round{ float: right; margin-right: -7.5px; }
+
+/*08.html*/
+.record{ margin-top: 45px; background: #fff; }
+.record li{ font-size: 15px; padding: 14px; line-height: 1.6; border-bottom: 1px solid #f1f1f1; }
+.record li:last-child{ border-bottom: none; }
+.record li h3{ font-size: 18px; color: #333; }
+.record li p{ color: #707070; }
+.record li div{ color: #373737; }
+.record li div span{ color: #40b3bd; }
+.record li div span.detail{ float: right; }
+
+
+

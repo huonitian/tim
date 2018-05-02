@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>南海桂城医院</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../Css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../Css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="../Css/reg.css">
+	</head>
+	
+	<body class="bg_body">
+		<header class="phd">
+			<div class="logo-left" >
+				<span class="logo"></span>
+			</div>
+			<div class="back-right" onclick="history.go(-1)">
+				<span class="back"></span>
+			</div>
+			<h1>医技预约>预约时间</h1>
+		</header>
+		<div class="gh-curDoc">
+			<div class="times">
+				<div class="time-main">
+					<em class="left-line"></em>
+					<div class="gh-times">
+						<span></span><time class="showtime"></time>
+					</div>
+					<em class="right-line"></em>
+				</div>
+			</div>
+			<div class="swiper-container definition-time">
+				<div class="leftBtn">
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="rightBtn">
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="swiper-wrapper getweek">
+					<div class="swiper-slide hover">
+						<span class="curs"></span>
+						<p></p>
+						<time></time>
+					</div>
+					<div class="swiper-slide full">
+						<span></span>
+						<p></p>
+						<time></time>
+					</div>
+					
+					<div class="swiper-slide">
+						<span></span>
+						<p></p>
+						<time></time>
+					</div>
+					<div class="swiper-slide">
+						<span></span>
+						<p></p>
+						<time></time>
+					</div>
+					<div class="swiper-slide">
+						<span></span>
+						<p></p>
+						<time></time>
+					</div>
+					<div class="swiper-slide">
+						<span class="state"><em></em></span>
+						<p></p>
+						<time></time>
+					</div>
+					<div class="swiper-slide">
+						<span class="state"><em></em></span>
+						<p></p>
+						<time></time>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="date_subject">
+				<span id="date_week">2018-03-21 星期三</span>
+				<span class="subject_right">影响检查科</span>
+			</div>
+			<table class="table_time">
+				<tbody>
+					<tr>
+						<td width="30%">时段</td>
+						<td width="40%">号源</td>
+						<td width="30%">操作</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_bespoke">预约</span>
+						</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_expired">已满</span>
+						</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_bespoke">预约</span>
+						</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_bespoke">预约</span>
+						</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_bespoke">预约</span>
+						</td>
+					</tr>
+					<tr>
+						<td>08:00-08:30</td>
+						<td>14</td>
+						<td>
+							<span class="btn_bespoke">预约</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+	
+	<script type="text/javascript" src="../Jvs/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../Jvs/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../Jvs/reg.js"></script>
+	<script type="text/javascript">
+		$(window).ready(function() {
+			var mySwiper = new Swiper('.swiper-container', {
+				slidesPerView: 5,
+				slidesPerGroup: 1,
+				prevButton: '.swiper-button-prev',
+				nextButton: '.swiper-button-next',
+			});
+		});
+	</script>	
+	</body>
+</html>
